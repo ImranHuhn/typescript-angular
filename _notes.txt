@@ -24,5 +24,3 @@ push project to remote repo
 
 
 
-
-
