@@ -1,0 +1,19 @@
+install nvm
+use nvm to install node
+>npm install -g typescript
+>npm init
+>npm init @eslint/config
+>npm install -g eslint
+
+
+angular:
+>npm install -g @angular/cli
+
+
+github:
+create repo
+create personal access token for "repo"
+setup branch
+connect to remote repo with link
+login with username & password(password is the personal access token)
+push project to remote repo
