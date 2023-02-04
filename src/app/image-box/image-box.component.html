@@ -1,4 +1,19 @@
 <div id="image-box">
-    <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
-    <app-title></app-title>
+    <div class="left">
+        <h2>{{ contractInComponent[0].service }}</h2>
+        <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
+        <app-title></app-title>
+    </div>
+    <div class="right">
+        <h3>Contracts</h3>
+        <ul>
+            <!--*ng below is known as "directives"-->
+            <li *ngFor="let contract of contractInComponent"> <!--"contract" is used as a variable so it could be any name. contractInComponent is the assigned variable from the image-box.component.ts-->
+                Service: {{ contract.service }} <br>
+                Title: {{ contract.title }}
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
 </div>

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ImageBoxComponent } from './image-box/image-box.component';
 import { TitleComponent } from './image-box/title/title.component';
 
+import { ImageBoxService } from './image-box/image-box.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,7 @@ import { TitleComponent } from './image-box/title/title.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ImageBoxService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
