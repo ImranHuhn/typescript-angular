@@ -20,5 +20,19 @@ export class ImageBoxComponent implements OnInit {
     this.testingBoxInComponent = !this.testingBoxInComponent;
   }
 
+  // mouseEvent(event : any) {
+  //   console.log('Even Triggered');
+  //   console.log(event);
+  // }
+
+  parentEvent(event : any) {
+    console.log('Parent Triggered');
+  }
+
+  childEvent(event : any) {
+    event.stopPropagation(); //this will help prevent from the parent getting triggered when the child is suppose to only be triggered. this will be common because there are a lot of events with in events in websites.
+    console.log('Child Triggered');
+  }
+
   ngOnInit() {}
 }

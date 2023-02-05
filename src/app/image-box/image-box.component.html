@@ -92,11 +92,19 @@
             }"></div> -->
 
             <!-- 'testingBoxInComponent is the condition. if true, background color will be add into the scss file as black. if false, it will add the background color as green' -->
+            <!-- <div class="button" (click)="showBox()" [style.backgroundColor]="
+            testingBoxInComponent ? 'black' : 'green'
+            ">Save</div> -->
+            <!-- this is the same as ngClass where 'testingBoxInComponent' is the condition. if true the class active in 'class.active' will be add to the element. if false, it'll remove the class from the element-->
+            <!-- <div class="testing-box" [class.active]="testingBoxInComponent"></div> -->
+            
+
             <div class="button" (click)="showBox()" [style.backgroundColor]="
             testingBoxInComponent ? 'black' : 'green'
             ">Save</div>
-            <!-- this is the same as ngClass where 'testingBoxInComponent' is the condition. if true the class active in 'class.active' will be add to the element. if false, it'll remove the class from the element-->
-            <div class="testing-box" [class.active]="testingBoxInComponent"></div>
+            <div (click)="parentEvent($event)" style="background: black; padding: 20px;">
+                <div class="testing-box" (click)="childEvent($event)"></div>
+            </div>
         </div>
     </div>
 </div>
