@@ -14,7 +14,7 @@ export class GetDataService {
           title: 'Software Engineer'
       },
       {
-          service: 'Administrator',
+          service: 'IT',
           title: 'Network Engineer'
       },
       {
