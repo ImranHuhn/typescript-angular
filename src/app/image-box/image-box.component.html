@@ -79,7 +79,10 @@
                     "></div>
                 </li>
             </ul>
-            <div class="button" (click)="showBox()">Save</div>
+            <div class="button" (click)="showBox()" [ngStyle]="{
+                'backgroundColor': testingBoxInComponent ? 'black' : 'red',
+                'margin': testingBoxInComponent ? '50px' : '0px'
+            }">Save</div>
             <!-- in the div line below, 'active' is the class which connects to the scss file &.active. 'testingBoxInComponent' is the condition which can be true or false. true will activate the active class -->
             <!-- as for the part that has class 'billy,' it will be added as a class in the html tag because the conditional statemtent of 3 < 4 is true -->
             <!-- to put it simply, anything after the colon is a conditional statement and anything before the colon is the class that will be added or removed depending if the condition is true or not -->
