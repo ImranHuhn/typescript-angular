@@ -10,12 +10,29 @@
     </div>
     <div class="content">
         <div class="container">
-            <div class="content-box">
-                <h2>Tab 1 Content</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
-            </div>
+            <ul class="content-box" [ngSwitch]="activeTab">
+                <li class="content1" *ngSwitchCase="'tab-1'">
+                    <h2>Tab 1 Content</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
+                </li>
+                <li class="content2" *ngSwitchCase="'tab-2'">
+                    <h2>Tab 2 Content</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
+                </li>
+                <li class="content3" *ngSwitchCase="'tab-3'">
+                    <h2>Tab 3 Content</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel distinctio officiis amet, reprehenderit molestiae debitis officia earum assumenda inventore neque nesciunt nisi natus, asperiores ratione cum reiciendis iure suscipit.</p>
+                </li>
+                <li class="content-default" *ngSwitchDefault>
+                    <h2>Missing Tab</h2>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
