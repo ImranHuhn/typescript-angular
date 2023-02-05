@@ -9,10 +9,14 @@ import { GetDataService } from './get-data.service';
 })
 export class ImageBoxComponent implements OnInit {
   contractInComponent;
+  testingBoxInComponent = false;
   constructor(service: 
     //ImageBoxService,
     GetDataService) {
     this.contractInComponent = service.getContracts();
+  }
+  showBox() {
+    this.testingBoxInComponent = !this.testingBoxInComponent;
   }
 
   ngOnInit() {}
