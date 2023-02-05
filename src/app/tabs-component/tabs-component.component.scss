@@ -1,11 +1,15 @@
 #tabs-component {
     font-family: sans-serif;
+    height: 100%;
+    background: #edf1f2;
+    margin-bottom: 20px;
     .container {
         width: 90%;
         margin: 0 auto;
     }
     .header {
         background: #1a72ed;
+        padding-top: 3px;
         .tab-list {
             display: flex;
             .tab {
@@ -16,8 +20,14 @@
                 cursor: pointer;
                 &.active {
                     background: #edf1f2;
-                    color: #323333;
+                    color: #1a72ed;
                     font-weight: 700;
+                    -webkit-border-top-left-radius: 5px;
+                    -webkit-border-top-right-radius: 5px;
+                    -moz-border-radius-topleft: 5px;
+                    -moz-border-radius-topright: 5px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
                 }
             }
         }
