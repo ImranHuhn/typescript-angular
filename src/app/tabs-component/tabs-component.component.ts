@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tabs-component',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./tabs-component.component.scss']
 })
 export class TabsComponentComponent {
-
+  
+  activeTab = 'tab-1'
+  
+  constructor() {}
+  selectTab(tab: string) {
+    this.activeTab = tab;
+    console.log(tab);
+  }
+  ngOnInit() {}
 }
