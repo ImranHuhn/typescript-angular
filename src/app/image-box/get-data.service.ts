@@ -20,6 +20,18 @@ export class GetDataService {
       {
           service: 'Security',
           title: 'Security Engineer'
+      },
+      {
+        service: 'Programming',
+        title: 'Software Engineer'
+      },
+      {
+          service: 'IT',
+          title: 'Network Engineer'
+      },
+      {
+          service: 'Security',
+          title: 'Security Engineer'
       }
     ];
   }

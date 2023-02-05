@@ -24,7 +24,7 @@
 </div>
 -->
 
-
+<!--
 <div id="image-box">
     <div class="left">
         <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
@@ -47,6 +47,37 @@
             </ul>
             <ul *ngSwitchDefault>
                 <li>Not available</li>
+            </ul>
+        </div>
+    </div>
+</div>
+-->
+
+
+<div id="image-box">
+    <div class="left">
+        <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
+        <app-title></app-title>
+    </div>
+    <div class="right">
+        <h3>Contracts</h3>
+        <div>
+            <ul>
+                <li *ngFor="
+                let contract of contractInComponent; 
+                index as i; 
+                first as isFirst; 
+                even as isEven">
+                    Service: {{ contract.service }} {{ i }}<br>
+                    Title: {{ contract.title }}
+                    <div *ngIf="isEven" 
+                    style="
+                    display: inline-block;
+                    width: 10px; 
+                    height: 10px; 
+                    background: red;
+                    "></div>
+                </li>
             </ul>
         </div>
     </div>
