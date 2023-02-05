@@ -54,10 +54,10 @@
 -->
 
 
-<div id="image-box">
+<!--<div id="image-box">
     <div class="left">
-        <img [src]='coverUrlInComponent'/> <!--putting src in square brackets is called property binding. interpelation is when using curly brackets-->
-        <app-title></app-title>
+        <img [src]='coverUrlInComponent'/> --><!--putting src in square brackets is called property binding. interpelation is when using curly brackets-->
+        <!-- <app-title></app-title>
     </div>
     <div class="right">
         <h3>Contracts</h3>
@@ -78,7 +78,7 @@
                     background: red;
                     "></div>
                 </li>
-            </ul>
+            </ul> -->
             <!-- <div class="button" (click)="showBox()" [ngStyle]="{
                 'backgroundColor': testingBoxInComponent ? 'black' : 'red',
                 'margin': testingBoxInComponent ? '50px' : '0px'
@@ -97,8 +97,52 @@
             ">Save</div> -->
             <!-- this is the same as ngClass where 'testingBoxInComponent' is the condition. if true the class active in 'class.active' will be add to the element. if false, it'll remove the class from the element-->
             <!-- <div class="testing-box" [class.active]="testingBoxInComponent"></div> -->
-            
+            <!--<div class="button" (click)="showBox()" [style.backgroundColor]="
+            testingBoxInComponent ? 'black' : 'green'
+            ">Save</div>
+            <div (click)="parentEvent($event)" style="background: black; padding: 20px;">
+                <div class="testing-box" (click)="childEvent($event)"></div>
+            </div>
+        </div>
+    </div>
+</div>-->
 
+
+
+<div id="image-box">
+    <div class="left">
+        <img [src]='coverUrlInComponent'/>
+        <app-title></app-title>
+    </div>
+    <div class="right">
+        <div>
+            <label>First Name</label>
+            <input [(ngModel)]="form.fName">
+        </div>
+        <div>
+            <label>Last Name</label>
+            <input [(ngModel)]="form.lName">
+        </div>
+        {{form.fName}} {{form.lName}}
+        <h3>Contracts</h3>
+        <div>
+            <ul>
+                <li *ngFor="
+                let contract of contractInComponent; 
+                index as i; 
+                first as isFirst; 
+                even as isEven">
+                    Service: {{ contract.service }} {{ i }}<br>
+                    Title: {{ contract.title }}
+                    <div *ngIf="isEven" 
+                    style="
+                    display: inline-block;
+                    width: 10px; 
+                    height: 10px; 
+                    background: red;
+                    "></div>
+                </li>
+            </ul>
             <div class="button" (click)="showBox()" [style.backgroundColor]="
             testingBoxInComponent ? 'black' : 'green'
             ">Save</div>

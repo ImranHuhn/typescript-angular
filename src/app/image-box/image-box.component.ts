@@ -34,5 +34,10 @@ export class ImageBoxComponent implements OnInit {
     console.log('Child Triggered');
   }
 
+  form : any = {
+    fName: '',
+    lName: ''
+  }
+
   ngOnInit() {}
 }
