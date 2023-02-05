@@ -7,20 +7,20 @@ export class GetDataService {
 
   constructor() { }
 
-  getContracts() {
+  getContracts() : any {
     return [
-        {
-            service: 'Programming',
-            title: 'Software Engineer'
-        },
-        {
-            service: 'Administrator',
-            title: 'Network Engineer'
-        },
-        {
-            service: 'Security',
-            title: 'Security Engineer'
-        }
+      {
+          service: 'Programming',
+          title: 'Software Engineer'
+      },
+      {
+          service: 'Administrator',
+          title: 'Network Engineer'
+      },
+      {
+          service: 'Security',
+          title: 'Security Engineer'
+      }
     ];
-}
+  }
 }
