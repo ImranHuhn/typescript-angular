@@ -17,5 +17,11 @@ setup branch
 connect to remote repo with link
 login with username & password(password is the personal access token)
 push project to remote repo
+<<<<<<< HEAD
 use gcm for automatic credential login
 
+=======
+
+angular cheatsheet:
+https://angular.io/guide/cheatsheet
+>>>>>>> db0355597caf906c08a8fcefd4620acc10939c6c

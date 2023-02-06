@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+//import { ImageBoxService } from './image-box.service';
+import { GetDataService } from './get-data.service';
 
 @Component({
   selector: 'app-image-box',
@@ -6,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./image-box.component.scss']
 })
 export class ImageBoxComponent implements OnInit {
-  constructor() {}
+  contractInComponent;
+  constructor(service: 
+    //ImageBoxService,
+    GetDataService) {
+    this.contractInComponent = service.getContracts();
+  }
+
   ngOnInit() {}
 }
